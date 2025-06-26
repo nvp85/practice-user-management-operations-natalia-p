@@ -1,30 +1,22 @@
-drop table if exists orders;
-drop table if exists customers;
-
-create table customers (
- id int primary key auto_increment,
- first_name varchar(50),
- last_name varchar(50)
-);
-
-create table orders (
- id int primary key,
- customer_id int null,
- order_date date,
- total_amount decimal(10, 2),
- foreign key (customer_id) references customers(id)
-);
-
-insert into customers (id, first_name, last_name) values
-(1, 'John', 'Doe'),
-(2, 'Jane', 'Smith'),
-(3, 'Alice', 'Smith'),
-(4, 'Bob', 'Brown');
-
-insert into orders (id, customer_id, order_date, total_amount) values
-(1, 1, '2023-01-01', 100.00),
-(2, 1, '2023-02-01', 150.00),
-(3, 2, '2023-01-01', 200.00),
-(4, 3, '2023-04-01', 250.00),
-(5, 3, '2023-04-01', 300.00),
-(6, NULL, '2023-04-01', 100.00);
+insert into users (username, firstName, lastName, age)
+values
+ ('asmith', 'Alice', 'Smith', 20),
+ ('bdoe', 'Bob', 'Doe', 33),
+ ('cjohnson', 'Charlie', 'Johnson', 41),
+ ('dlee', 'David', 'Lee', 19),
+ ('ejones', 'Eve', 'Jones', 30),
+ ('fkim', 'Frank', 'Kim', 15),
+ ('gwhite', 'Grace', 'White', 22),
+ ('hwang', 'Henry', 'Wang', 19),
+ ('ijones', 'Ivy', 'Jones', 50),
+ ('jdoe', 'John', 'Doe', 65),
+ ('klee', 'Kevin', 'Lee', 62),
+ ('lchen', 'Linda', 'Chen', 24),
+ ('mlee', 'Michael', 'Lee', 29),
+ ('nkim', 'Nancy', 'Kim', 18),
+ ('ojohnson', 'Oscar', 'Johnson', 40),
+ ('pchen', 'Peter', 'Chen', 55),
+ ('qwang', 'Quincy', 'Wang', 28),
+ ('rjones', 'Rachel', 'Jones', 37),
+ ('slee', 'Sam', 'Lee', 21),
+ ('tkim', 'Tina', 'Kim', 26);
