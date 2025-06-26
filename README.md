@@ -1,0 +1,1 @@
+In the script db_set_up we create a table users and populate it with some data. In the practice file, I practice the following SQL commands on the tables: insert a new user record, update an exisiting user record, delete a user record based on its id, select records based on a condition using sorting and limit.
